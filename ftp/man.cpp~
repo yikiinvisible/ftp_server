@@ -1,0 +1,17 @@
+#include "threadpool.h"
+ 
+class Task{
+public:
+	void process(){
+		std::cout<<"2"<<std::endl;
+	}
+};
+
+int main(){
+
+	threadpool<Task> my_pool();
+	while(1){
+		Task  a;
+		my_pool.append(&a);
+	}
+}

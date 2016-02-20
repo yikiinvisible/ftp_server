@@ -1,0 +1,16 @@
+all: man
+
+INCLUDE = .
+man: threadpool.o man.o 
+	g++ -o main threadpool.o man.o 
+
+threadpool.o: threadpool.cpp threadpool.h sem.h locker.h
+	g++ -I$(INCLUDE) -c threadpool.cpp -lpthread
+
+man.o: threadpool.h man.cpp
+	g++ -I$(INCLUDE) -c man.cpp
+
+
+
+make clean:
+	-rm *.o
