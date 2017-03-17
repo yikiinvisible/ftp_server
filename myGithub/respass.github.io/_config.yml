@@ -1,0 +1,27 @@
+# Site Settings
+title:               respass
+tagline:             blog
+description:
+baseurl:            "/respass.github.io"
+url:                #"https://lenpaul.github.io"
+github:              
+  url:               #"https://lenpaul.github.io/Lagrange"
+author:
+  name:              "zpf"
+  email:             "514371279@qq.com"
+  github:            "respass"
+navigation:
+- title: About
+  url: /about
+- title: Writing
+  url: /writing
+
+
+paginate:            5
+disqus:              #"your-disqus"
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           none
+gems:                [jekyll-paginate]
